@@ -2,6 +2,10 @@
 
 namespace CrackingTheCodingInterview.Chapter01;
 
+/// <summary>
+/// Implement an algorithm to determine if a string has all unique characters.
+/// What if you cannot use additional data structures?
+/// </summary>
 public class Question01 : Question
 {
     private static bool IsUniqueChars(string word)
@@ -23,7 +27,7 @@ public class Question01 : Question
         for (var i = 0; i < words.Length; i++)
         {
             bool result = IsUniqueChars(words[i]);
-            Console.WriteLine(words[i] + ": " + result + " : Passed Test: " + (result == expected[i]));
+            Console.WriteLine("Test Word: " + words[i] + " : " + result + "\nPassed Test: " + (result == expected[i]));
         }
     }
 }

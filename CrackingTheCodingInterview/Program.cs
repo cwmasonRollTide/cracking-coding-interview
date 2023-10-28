@@ -13,7 +13,9 @@ internal static class Program
             // Chapter 01
             new Question[]
             {
-                new Question01()
+                new Question01(),
+                new Question02(),
+                new Question03()
             }
         };
         
@@ -26,6 +28,7 @@ internal static class Program
 
             foreach (Question q in chapters[i])
             {
+                Console.WriteLine("// ---- ---- ---- ");
                 Console.WriteLine($"// Executing: {q.Name.Split(".").Last()}");
                 Console.WriteLine("// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----");
                 q.Run();
