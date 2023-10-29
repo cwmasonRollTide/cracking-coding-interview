@@ -15,7 +15,8 @@ internal static class Program
             {
                 new Question01(),
                 new Question02(),
-                new Question03()
+                new Question03(),
+                new Question04()
             }
         };
         

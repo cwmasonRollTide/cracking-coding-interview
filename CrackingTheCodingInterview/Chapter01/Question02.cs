@@ -15,6 +15,13 @@ public class Question02 : Question
         return AreDictionariesEqual(wordOneCharMap, wordTwoCharMap);
     }
 
+    /// <summary>
+    /// Iterate through an input word and return a dictionary with the characters
+    /// as the keys, and the value of how many times that character occurs
+    /// in the word
+    /// </summary>
+    /// <param name="word">Input string. Any valid string</param>
+    /// <returns>Dictionary of char to int, number of times each character appears in word</returns>
     private static Dictionary<char, int> BuildCharMap(string word)
     {
         var wordCharMap = new Dictionary<char, int>();
@@ -26,6 +33,14 @@ public class Question02 : Question
         return wordCharMap;
     }
     
+    /// <summary>
+    /// Deep equal of two dictionaries. Order of the elements does not matter
+    /// </summary>
+    /// <param name="dict1"></param>
+    /// <param name="dict2"></param>
+    /// <typeparam name="TKey">The type of the dictionaries' keys</typeparam>
+    /// <typeparam name="TValue">The type of the dictionaries' values</typeparam>
+    /// <returns>Boolean indicating if they are equal or not</returns>
     private static bool AreDictionariesEqual<TKey, TValue>(
         Dictionary<TKey, TValue> dict1, 
         IReadOnlyDictionary<TKey, TValue> dict2) where TKey : notnull
