@@ -19,15 +19,8 @@ public class Question01 : Question
         return true;
     }
     
-    public override void Run()
+    public override object Run(params object[] parameters)
     {
-        string[] words = { "abcde", "hello", "apple", "kite", "padle" };
-        bool[] expected = { true, false, false, true, true };
-
-        for (var i = 0; i < words.Length; i++)
-        {
-            bool result = IsUniqueChars(words[i]);
-            Console.WriteLine("Test Word: " + words[i] + " : " + result + "\nPassed Test: " + (result == expected[i]));
-        }
+        return IsUniqueChars(parameters[0] as string ?? throw new InvalidOperationException());
     }
 }

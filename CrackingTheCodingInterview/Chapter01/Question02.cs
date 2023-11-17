@@ -50,22 +50,10 @@ public class Question02 : Question
                 EqualityComparer<TValue>.Default.Equals(pair.Value, value));
     }
     
-    public override void Run()
+    public override object Run(params object[] parameters)
     {
-        var testCases = new Tuple<string, string>[]
-        {
-            new("abcde", "edcba"),
-            new("deer", "reed"),
-            new("xxyyzz", "yyyyyy"),
-            new("zzyyi", "yyizz"),
-            new("poiejfi", "ipoiejf"),
-            new("zzzzzzzzzzzz", "zzzz")
-        };
-        var expected = new[] { true, true, false, true, true, false };
-        for (var i = 0; i<testCases.Length; i++)
-        {
-            bool result = IsPermutation(testCases[i].Item1, testCases[i].Item2);
-            Console.WriteLine("Test Words: " + testCases[i].Item1 + " " + testCases[i].Item2 + "\nPassed Test: " + (result == expected[i]));
-        }
+        var wordOne = parameters[0] as string;
+        var wordTwo = parameters[1] as string;
+        return IsPermutation(wordOne!, wordTwo!);
     }
 }

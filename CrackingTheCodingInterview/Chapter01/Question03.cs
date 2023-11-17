@@ -15,21 +15,10 @@ public class Question03 : Question
         return trimmed?.Replace(" ", "%20") ?? input;
     }
     
-    public override void Run()
+    public override object Run(params object[] parameters)
     {
-        var testCases = new Tuple<string, int>[]
-        {
-            new("Mr John Smith     ", 13 ),
-            new ("Mr Connor Mason     ", 15),
-            new ("Another Test Case     ", 17)
-        };
-        var expected = new[] { "Mr%20John%20Smith", "Mr%20Connor%20Mason", "Another%20Test%20Case" };
-        for (var i = 0; i < testCases.Length; i++)
-        {
-            string result = UrlIfy(testCases[i].Item1, testCases[i].Item2);
-            Console.WriteLine("Test Word: " + testCases[i].Item1 + 
-                              $"\nResult: {result}" + 
-                              "\nPassed Test: " + result.Equals(expected[i]));
-        }
+        var phrase = (parameters[0] as string)!;
+        int trueLength = parameters[1] as int? ?? 0;
+        return UrlIfy(phrase, trueLength);
     }
 }

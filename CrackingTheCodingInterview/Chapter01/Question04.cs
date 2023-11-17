@@ -1,5 +1,4 @@
-﻿using System.Net;
-using CrackingTheCodingInterview.Shared;
+﻿using CrackingTheCodingInterview.Shared;
 
 namespace CrackingTheCodingInterview.Chapter01;
 
@@ -54,21 +53,9 @@ public class Question04 : Question
         return wordCharMap;
     }
 
-    public override void Run()
+    public override object Run(params object[] parameters)
     {
-        var testCases = new List<string>
-        {
-            "Tact Coa", "randomword", "leggel", "leggel two"
-        };
-        var expected = new List<bool>
-        {
-            true, false, true, false
-        };
-        for (var i = 0; i < testCases.Count; i++)
-        {
-            bool result = IsPalindrome(testCases[i]);
-            Console.WriteLine("Test Word: " + testCases[i] + 
-                              "\nPassed Test: " + result.Equals(expected[i]));
-        }
+        var word = parameters[0] as string;
+        return IsPalindrome(word!);
     }
 }
