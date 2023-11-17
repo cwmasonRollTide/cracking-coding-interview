@@ -1,6 +1,6 @@
-﻿using CrackingTheCodingInterview.Chapter02;
+﻿using FluentAssertions;
 using CrackingTheCodingInterview.Shared;
-using FluentAssertions;
+using CrackingTheCodingInterview.Chapter02;
 
 namespace CrackingTheCodingInterview.Tests.Chapter02;
 
