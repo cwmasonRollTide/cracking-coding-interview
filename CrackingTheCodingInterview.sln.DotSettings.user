@@ -1,4 +1,4 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ff555b53_002Daf09_002D4bad_002D9cf1_002Dc02fb3fcf90e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Chapter01" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;ProjectFolder&gt;34860C56-1841-46A1-B974-5D3233A1456D/d:Chapter01&lt;/ProjectFolder&gt;&#xD;
+  &lt;Project Location="C:\Users\Connor\projects\cracking-coding-interview\CrackingTheCodingInterview.Tests" Presentation="&amp;lt;CrackingTheCodingInterview.Tests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
