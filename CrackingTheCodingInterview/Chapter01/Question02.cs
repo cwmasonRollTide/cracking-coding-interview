@@ -50,7 +50,7 @@ public class Question02 : Question
                 EqualityComparer<TValue>.Default.Equals(pair.Value, value));
     }
     
-    public override object Run(params object[] parameters)
+    public override object? Run(params object[] parameters)
     {
         var wordOne = parameters[0] as string;
         var wordTwo = parameters[1] as string;

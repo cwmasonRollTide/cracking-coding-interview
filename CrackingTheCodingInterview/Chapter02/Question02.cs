@@ -9,12 +9,10 @@ public class Question02 : Question
 {
     private static int FindKthFromLastElement(Node<int>? node, int k, ref int i)
     {
-        if (node == null) return -1; // Return -1 or handle it as an error
-
-        if (node.Next == null)
+        if (node?.Next == null)
         {
             i = 1; // Start counting from the last node
-            return node.Data;
+            return node!.Data;
         }
 
         int data = FindKthFromLastElement(node.Next, k, ref i);
@@ -25,7 +23,7 @@ public class Question02 : Question
             data;
     }
 
-    public override object Run(params object[] parameters)
+    public override object? Run(params object[] parameters)
     {
         var input = parameters[0] as Node<int>;
         int k = parameters[1] as int? ?? 0;

@@ -15,7 +15,7 @@ public class Question09 : Question
         string concatenated = wordOne + wordOne;
         return concatenated!.Contains(wordTwo);
     }
-    public override object Run(params object[] parameters)
+    public override object? Run(params object[] parameters)
     {
         var wordOne = parameters[0] as string;
         var wordTwo = parameters[1] as string;

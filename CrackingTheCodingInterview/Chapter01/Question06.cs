@@ -5,7 +5,7 @@ namespace CrackingTheCodingInterview.Chapter01;
 
 public class Question06 : Question
 {
-    private static string Compress(string input)
+    private static string? Compress(string? input)
     {
         var characterCount = 0;
         char currentCharacter = input[0];
@@ -27,7 +27,7 @@ public class Question06 : Question
             input : 
             builtString.ToString();
     }
-    public override object Run(params object[] parameters)
+    public override object? Run(params object[] parameters)
     {
         var input = parameters[0] as string;
         return Compress(input!);

@@ -3,7 +3,7 @@
 public class Node<T>
 {
     public T? Data;
-    public Node<T>? Next = null;
+    public Node<T>? Next;
 
     public Node(T? data)
     {
@@ -21,7 +21,7 @@ public class Node<T>
             if (iterator.Data?.Equals(data) ?? false) return true;
         }
 
-        return false;
+        return false; 
     }
 
     public void Append(T data)
@@ -32,7 +32,6 @@ public class Node<T>
         {
             iterator = iterator.Next;
         }
-
         iterator.Next = end;
     }
 

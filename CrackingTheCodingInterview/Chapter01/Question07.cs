@@ -30,7 +30,7 @@ public class Question07 : Question
         return result;
     }
 
-    public override object Run(params object[] parameters)
+    public override object? Run(params object[] parameters)
     {
         if (parameters == null || parameters.Length == 0 || parameters.Any(p => p is not List<int>))
         {

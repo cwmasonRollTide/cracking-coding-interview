@@ -53,7 +53,7 @@ public class Question04 : Question
         return wordCharMap;
     }
 
-    public override object Run(params object[] parameters)
+    public override object? Run(params object[] parameters)
     {
         var word = parameters[0] as string;
         return IsPalindrome(word!);

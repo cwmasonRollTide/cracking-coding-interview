@@ -19,7 +19,7 @@ public class Question01 : Question
         return true;
     }
     
-    public override object Run(params object[] parameters)
+    public override object? Run(params object[] parameters)
     {
         return IsUniqueChars(parameters[0] as string ?? throw new InvalidOperationException());
     }

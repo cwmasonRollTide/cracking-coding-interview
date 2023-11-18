@@ -4,7 +4,7 @@ namespace CrackingTheCodingInterview.Chapter02;
 
 public class Question01 : Question
 {
-    private static Node<int> RemoveDuplicates(Node<int> head)
+    private static Node<int>? RemoveDuplicates(Node<int>? head)
     {
         var collectedData = new HashSet<int> { head.Data };
         Node<int>? iterator = head.Next;
@@ -24,7 +24,7 @@ public class Question01 : Question
 
         return head;
     }
-    public override object Run(params object[] parameters)
+    public override object? Run(params object[] parameters)
     {
         var input = parameters[0] as Node<int>;
         return RemoveDuplicates(input!);
