@@ -27,7 +27,7 @@ public class Question02 : Question
     {
         var input = parameters[0] as Node<int>;
         int k = parameters[1] as int? ?? 0;
-        int index = 0;
+        var index = 0;
         return FindKthFromLastElement(input!, k, ref index);
     }
 
