@@ -16,21 +16,20 @@ public class TestQuestion07
         nodeOne.Append(8); // Intersection point
         nodeOne.Append(10);
         nodeOne.Append(11);
-
-        Node<int>? elementInListOne = null;
+        Node<int>? sharedNode = null;
         Node<int> iterator = nodeOne;
         for (var i = 0; i < 3; i++)
         {
-            elementInListOne = iterator;
+            sharedNode = iterator;
             iterator = iterator?.Next!;
         }
-
         var nodeTwo = new Node<int>(20);
         nodeTwo.Next = new Node<int>(15);
-        nodeTwo.Next.Next = elementInListOne;
+        nodeTwo.Next.Next = sharedNode;
 
         var result = (Node<int>)Sut.Run(nodeOne, nodeTwo)!;
-        result.Data.Should().Be(8);
+        
+        result.Should().BeEquivalentTo(sharedNode);
     }
     
     [Fact]
