@@ -6,8 +6,8 @@ public class Question05 : Question
 {
     private static Node<int> SumLists(Node<int> operandOne, Node<int> operandTwo)
     {
-        string numberOne = ExtractNumber(operandOne);
-        string numberTwo = ExtractNumber(operandTwo);
+        string numberOne = ExtractReversedNumber(operandOne);
+        string numberTwo = ExtractReversedNumber(operandTwo);
         var result = (int.Parse(numberOne) + int.Parse(numberTwo)).ToString();
         Node<int>? toReturn = null;
         for (var i = result.Length - 1; i >= 0; i--)
@@ -20,16 +20,16 @@ public class Question05 : Question
         return toReturn;
     }
 
-    private static string ExtractNumber(Node<int> node)
+    private static string ExtractReversedNumber(Node<int> node)
     {
         if (node.Next == null)
         {
             return node.Data.ToString();
         }
 
-        return ExtractNumber(node.Next) + node.Data;
+        return ExtractReversedNumber(node.Next) + node.Data;
     }
-    
+
     public override object? Run(params object[] parameters)
     {
         var operandOne = parameters[0] as Node<int>;

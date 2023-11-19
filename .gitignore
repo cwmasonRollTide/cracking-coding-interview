@@ -1,1 +1,7 @@
-﻿/.idea/
+﻿**/bin/
+**/obj/
+.idea/
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
