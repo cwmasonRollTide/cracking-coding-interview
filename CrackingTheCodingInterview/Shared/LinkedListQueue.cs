@@ -3,41 +3,51 @@
 public class LinkedListQueue<T>
 {
     private Node<T>? Start;
-
-    public LinkedListQueue(T data)
-    {
-        var newNode = new Node<T>(data);
-        Start = newNode;
-    }
+    private Node<T>? End;
 
     public LinkedListQueue()
     {
         Start = null;
+        End = null;
     }
 
     public void Add(T data)
     {
+        var newNode = new Node<T>(data);
         if (Start == null)
         {
-            Start = new Node<T>(data);
-            return;
+            Start = newNode;
+            End = newNode;
         }
-        Node<T>? iterator = Start;
-        while (iterator.Next != null)
+        else
         {
-            iterator = iterator.Next;
+            End!.Next = newNode;
+            End = newNode;
         }
-        iterator.Next = new Node<T>(data);
     }
     
     public T? Remove()
     {
         if (Start == null) return default;
         
-        T? toReturn = Start.Data;
+        T toReturn = Start.Data!;
         Start = Start.Next;
+
+        if (Start == null)
+        {
+            End = null;
+        }
+
         return toReturn;
     }
-    //peek
-    //IsEmpty
+
+    public T? Peek()
+    {
+        return Start == null ? throw new ArgumentOutOfRangeException() : Start.Data;
+    }
+
+    public bool IsEmpty()
+    {
+        return Start == null;
+    }
 }

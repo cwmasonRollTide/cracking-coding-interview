@@ -22,7 +22,8 @@ public class LinkedListQueueTests
     public void Should_Add_And_Remove_Elements_Of_Queue_InitializedVersion()
     {
         const int firstIn = 1;
-        var queue = new LinkedListQueue<int>(firstIn);
+        var queue = new LinkedListQueue<int>();
+        queue.Add(firstIn);
         queue.Add(5);
         queue.Add(6);
         queue.Add(7);

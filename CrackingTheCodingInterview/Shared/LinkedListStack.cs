@@ -29,7 +29,7 @@ public class LinkedListStack<T>
 
     public T? Pop()
     {
-        if (Top == null) return default;
+        if (Top == null) throw new ArgumentOutOfRangeException();
         T? toReturn = Top.Data;
         Top = Top.Next;
         return toReturn;
