@@ -1,7 +1,4 @@
-﻿using System.Dynamic;
-using CrackingTheCodingInterview.Shared;
-
-namespace CrackingTheCodingInterview.Chapter03;
+﻿namespace CrackingTheCodingInterview.Chapter03;
 
 /// <summary>
 /// Think about a way to implement m stacks in one array
@@ -36,7 +33,7 @@ public class MultiStack<T>
         if (stackNum < 0 || stackNum >= _numberOfStacks)
             throw new IndexOutOfRangeException();
             
-        int index = GetTopIndex(stackNum) + 1;
+        var index = GetTopIndex(stackNum) + 1;
         if (index >= (stackNum + 1) * _stackCapacity)
             throw new StackOverflowException();
 
@@ -48,19 +45,19 @@ public class MultiStack<T>
         if (stackNum < 0 || stackNum >= _numberOfStacks)
             throw new IndexOutOfRangeException();
 
-        int index = GetTopIndex(stackNum);
+        var index = GetTopIndex(stackNum);
         if (index < stackNum * _stackCapacity)
             throw new InvalidOperationException();
 
-        T? value = _values[index];
+        var value = _values[index];
         _values[index] = default;
         return value;
     }
 
     private int GetTopIndex(int stackNum) 
     {
-        int offset = stackNum * _stackCapacity;
-        for (int i = offset + _stackCapacity - 1; i >= offset; i--) 
+        var offset = stackNum * _stackCapacity;
+        for (var i = offset + _stackCapacity - 1; i >= offset; i--) 
         {
             if (!EqualityComparer<T>.Default.Equals(_values[i], default(T))) 
                 return i;
