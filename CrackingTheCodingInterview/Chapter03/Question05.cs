@@ -13,14 +13,14 @@ public class Question05 : Question
 		var tmpStack = new Stack<int>();
 		while (startStack.Count > 0)
 		{
-			var tmp = startStack.Pop();
-			while (tmpStack.Count > 0 && tmp < tmpStack.Peek())
+			int temp = startStack.Pop();
+			while (tmpStack.Count > 0 && temp < tmpStack.Peek())
 			{
 				startStack.Push(tmpStack.Pop());
 			}
-			tmpStack.Push(tmp);
+			tmpStack.Push(temp);
 		}
-		
+
 		while (tmpStack.Count > 0)
 		{
 			startStack.Push(tmpStack.Pop());

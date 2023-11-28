@@ -2,8 +2,8 @@
 
 public class LinkedListQueue<T>
 {
-    private Node<T>? Start;
-    private Node<T>? End;
+    public Node<T>? End;
+    public Node<T>? Start;
 
     public LinkedListQueue()
     {

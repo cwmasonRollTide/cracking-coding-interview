@@ -23,6 +23,7 @@ public class MinStack<T>
 		if (_top == null)
 		{
 			_top = newNode;
+			_min = data;
 			return;
 		}
 		var oldTop = _top;
